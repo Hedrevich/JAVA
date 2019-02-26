@@ -1,0 +1,75 @@
+[main] INFO com.sap.di.ext.mta.proc.DescriptorProcessorImpl - MTA manifest processing on 7 threads
+[main] INFO com.sap.di.ext.mta.cli.CliExecutor - arguments: [--build-target=CF, build]
+[main] INFO com.sap.di.ext.mta.cli.CliExecutor - Archive path is D:\dev\SAP-CLOUD-JAVA\SAP-CLOUD-JAVA.mtar
+[main] DEBUG com.sap.di.ext.mta.cli.CliBuildExecutor - Starting MTA build
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.DesignDescriptor$$impl0 for bean interface com.sap.di.ext.mta.dto.DesignDescriptor
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.DesignModule$$impl1 for bean interface com.sap.di.ext.mta.dto.DesignModule
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.RequiredSymbol$$impl2 for bean interface com.sap.di.ext.mta.dto.RequiredSymbol
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.ProvidedSymbol$$impl3 for bean interface com.sap.di.ext.mta.dto.ProvidedSymbol
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.Resource$$impl4 for bean interface com.sap.di.ext.mta.dto.Resource
+[main] INFO com.sap.di.ext.mta.proc.ProcessingRun - Processing MTA javaSAM
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.proc.ModuleBuildDependency$$impl5 for bean interface com.sap.di.ext.mta.proc.ModuleBuildDependency
+[main] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM
+[main] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: created 8 verification tasks
+[pool-1-thread-1] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: started symbol resource[pt_hdi]
+[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: started symbol resource[pt_dest]
+[pool-1-thread-2] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: started symbol resource[javauaa]
+[pool-1-thread-4] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: started symbol resource[pt_router]
+[pool-1-thread-5] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: started symbol resource[pt_conn]
+[pool-1-thread-6] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: started symbol module[dbjava]
+[pool-1-thread-4] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: finished symbol resource[pt_router]
+[pool-1-thread-5] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: finished symbol resource[pt_conn]
+[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: finished symbol resource[pt_dest]
+[pool-1-thread-1] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: finished symbol resource[pt_hdi]
+[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: started symbol module[router]
+[pool-1-thread-7] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: started symbol module[javarest]
+[pool-1-thread-2] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: finished symbol resource[javauaa]
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'router': command timeout is 300 seconds
+[pool-1-thread-7] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'javarest': command timeout is 300 seconds
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'dbjava': command timeout is 300 seconds
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'router': command output file is D:\dev\SAP-CLOUD-JAVA\.mta\modulebuild5850091736359319661.txt
+[pool-1-thread-7] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'javarest': command output file is D:\dev\SAP-CLOUD-JAVA\.mta\modulebuild4329576728141665423.txt
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'dbjava': command output file is D:\dev\SAP-CLOUD-JAVA\.mta\modulebuild5640642261825516402.txt
+[pool-1-thread-7] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'javarest': invoking command [mvn.cmd, -B, clean, install, -DskipTests="true"]
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'router': invoking command [npm.cmd, install, --production]
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'dbjava': invoking command [npm.cmd, install, --production]
+[pool-1-thread-6] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: finished symbol module[dbjava]
+[pool-1-thread-7] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: finished symbol module[javarest]
+[main] ERROR com.sap.di.ext.mta.cli.CliExecutor - Failed to build module "javarest". Input length = 1
+[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaSAM: finished symbol module[router]
+com.sap.di.ext.mta.proc.MtaProcessingException: Failed to build module "javarest". Input length = 1
+	at com.sap.di.ext.mta.proc.ProcessingRun.consumeNextVerificationResult(ProcessingRun.java:291)
+	at com.sap.di.ext.mta.proc.ProcessingRun.verifySymbols(ProcessingRun.java:248)
+	at com.sap.di.ext.mta.proc.ProcessingRun.execute(ProcessingRun.java:97)
+	at com.sap.di.ext.mta.proc.DescriptorProcessorImpl.process(DescriptorProcessorImpl.java:68)
+	at com.sap.di.ext.mta.cli.CliBuildExecutor.build(CliBuildExecutor.java:100)
+	at com.sap.di.ext.mta.cli.CliExecutor.run(CliExecutor.java:170)
+	at com.sap.di.ext.mta.cli.CliExecutor.run(CliExecutor.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.sap.di.ext.mta.cli.MtaMain.doMain(MtaMain.java:95)
+	at com.sap.di.ext.mta.cli.MtaMain.main(MtaMain.java:36)
+Caused by: com.sap.di.ext.mta.cli.CliException: Failed to build module "javarest". Input length = 1
+	at com.sap.di.ext.mta.cli.CliProcessingHelper.verifyModule(CliProcessingHelper.java:56)
+	at com.sap.di.ext.mta.cli.CliBuildExecutor$ProcHelperAnchor.verifyModule(CliBuildExecutor.java:156)
+	at com.sap.di.ext.mta.proc.ModuleHandler$1.call(ModuleHandler.java:189)
+	at com.sap.di.ext.mta.proc.ProcessingRun$VerificationTask.lambda$new$4(ProcessingRun.java:320)
+	at org.eclipse.che.commons.lang.concurrent.CopyThreadLocalCallable.call(CopyThreadLocalCallable.java:30)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.nio.charset.MalformedInputException: Input length = 1
+	at java.nio.charset.CoderResult.throwException(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.sap.di.ext.mta.cli.CommandHelper.executeBuild(CommandHelper.java:91)
+	at com.sap.di.ext.mta.cli.builder.MavenBuilder.build(MavenBuilder.java:92)
+	at com.sap.di.ext.mta.cli.CliProcessingHelper.verifyModule(CliProcessingHelper.java:54)
+	... 8 more

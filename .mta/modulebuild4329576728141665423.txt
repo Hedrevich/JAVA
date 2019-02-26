@@ -1,0 +1,62 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.leverx:levex-spring-demo >--------------------
+[INFO] Building levex-spring-demo 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ levex-spring-demo ---
+[INFO] Deleting D:\dev\SAP-CLOUD-JAVA\service\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ levex-spring-demo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ levex-spring-demo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to D:\dev\SAP-CLOUD-JAVA\service\target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/service/CloudService.java:[6,39] package com.sap.cloud.sdk.cloudplatform does not exist
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/service/CloudService.java:[12,17] cannot find symbol
+  symbol:   class CloudPlatform
+  location: class com.leverx.leverxspringdemo.service.CloudService
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/config/CloudConfig.java:[6,39] package com.sap.cloud.sdk.cloudplatform does not exist
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/config/CloudConfig.java:[7,39] package com.sap.cloud.sdk.cloudplatform does not exist
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/config/CloudConfig.java:[13,16] cannot find symbol
+  symbol:   class CloudPlatform
+  location: class com.leverx.leverxspringdemo.config.CloudConfig
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/config/CloudConfig.java:[14,24] cannot find symbol
+  symbol:   variable CloudPlatformAccessor
+  location: class com.leverx.leverxspringdemo.config.CloudConfig
+[INFO] 6 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.351 s
+[INFO] Finished at: 2019-02-26T13:27:59+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.0:compile (default-compile) on project levex-spring-demo: Compilation failure: Compilation failure: 
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/service/CloudService.java:[6,39] package com.sap.cloud.sdk.cloudplatform does not exist
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/service/CloudService.java:[12,17] cannot find symbol
+[ERROR]   symbol:   class CloudPlatform
+[ERROR]   location: class com.leverx.leverxspringdemo.service.CloudService
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/config/CloudConfig.java:[6,39] package com.sap.cloud.sdk.cloudplatform does not exist
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/config/CloudConfig.java:[7,39] package com.sap.cloud.sdk.cloudplatform does not exist
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/config/CloudConfig.java:[13,16] cannot find symbol
+[ERROR]   symbol:   class CloudPlatform
+[ERROR]   location: class com.leverx.leverxspringdemo.config.CloudConfig
+[ERROR] /D:/dev/SAP-CLOUD-JAVA/service/src/main/java/com/leverx/leverxspringdemo/config/CloudConfig.java:[14,24] cannot find symbol
+[ERROR]   symbol:   variable CloudPlatformAccessor
+[ERROR]   location: class com.leverx.leverxspringdemo.config.CloudConfig
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+"cmd" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
