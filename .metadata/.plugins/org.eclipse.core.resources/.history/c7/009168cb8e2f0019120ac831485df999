@@ -1,0 +1,43 @@
+package com.leverx.leverxspringproj.service;
+
+import java.util.List;
+import java.util.Optional; 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service; 
+ 
+import com.leverx.leverxspringproj.dao.FlowerDao;
+import com.leverx.leverxspringproj.domain.Flower; 
+
+@Service
+public class UserService {
+
+	@Autowired
+	private FlowerDao userDao;
+	
+	public List<Flower> getUserAll() {
+		return userDao.getAll();
+	}
+	
+	public Flower getUser(Long id) {
+		Optional<Flower> userOptional = this.userDao.getById(id);
+		Flower user = null;
+		if(userOptional.isPresent()) {
+			user = userOptional.get();
+		}
+		return user;
+	}
+	
+	public void createUser(Flower user) {
+		this.userDao.save(user);
+	}
+	
+	public void updateUser(Flower user) {
+		this.userDao.update(user);
+	}
+	
+	public void deleteUser(Long id) {
+		this.userDao.delete(id);
+	}
+	
+}

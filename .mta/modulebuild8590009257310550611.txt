@@ -1,0 +1,43 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.leverx:leverx-spring-proj >--------------------
+[INFO] Building leverx-spring-proj 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ leverx-spring-proj ---
+[INFO] Deleting D:\dev\javaCFMTA\service\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ leverx-spring-proj ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ leverx-spring-proj ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 21 source files to D:\dev\javaCFMTA\service\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ leverx-spring-proj ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\dev\javaCFMTA\service\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ leverx-spring-proj ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ leverx-spring-proj ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ leverx-spring-proj ---
+[INFO] Building jar: D:\dev\javaCFMTA\service\target\leverx-spring-proj-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.2.RELEASE:repackage (repackage) @ leverx-spring-proj ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ leverx-spring-proj ---
+[INFO] Installing D:\dev\javaCFMTA\service\target\leverx-spring-proj-0.0.1-SNAPSHOT.jar to C:\Users\Lenovo\.m2\repository\com\leverx\leverx-spring-proj\0.0.1-SNAPSHOT\leverx-spring-proj-0.0.1-SNAPSHOT.jar
+[INFO] Installing D:\dev\javaCFMTA\service\pom.xml to C:\Users\Lenovo\.m2\repository\com\leverx\leverx-spring-proj\0.0.1-SNAPSHOT\leverx-spring-proj-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.712 s
+[INFO] Finished at: 2019-02-26T17:40:07+03:00
+[INFO] ------------------------------------------------------------------------

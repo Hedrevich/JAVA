@@ -1,0 +1,16 @@
+id,shid,flid,name,description
+1,1,3,Flower world,20*20$
+2,1,3,Flower world,10*20$
+3,2,2,Dreams,5*10$
+4,2,3,Dreams,16*20$
+5,2,1,Dreams,3*15$
+6,1,2,Flower world,27*10$
+7,2,3,Dreams,12*20$
+8,1,4,Flower world,3*25$
+9,2,4,Dreams,8*25$
+10,3,5,Beauty Store,12*30$
+11,2,5,Dreams,8*30$
+12,3,3,Beauty Store,10*20$
+13,3,2,Beauty Store,12*10$
+14,2,1,Dreams,14*15$
+15,2,4,Dreams,22*25$

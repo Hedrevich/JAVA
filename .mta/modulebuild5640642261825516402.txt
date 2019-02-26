@@ -1,7 +1,0 @@
-npm WARN deploy@ No description
-npm WARN deploy@ No repository field.
-npm WARN deploy@ No license field.
-
-added 13 packages from 18 contributors and audited 13 packages in 2.764s
-found 1 low severity vulnerability
-  run `npm audit fix` to fix them, or `npm audit` for details

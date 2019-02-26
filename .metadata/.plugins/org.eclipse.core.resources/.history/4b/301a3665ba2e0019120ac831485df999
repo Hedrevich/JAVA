@@ -1,0 +1,5 @@
+package com.leverx.leverxspringproj.config;
+
+public class CloudConfig {
+
+}

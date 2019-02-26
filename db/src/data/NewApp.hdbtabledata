@@ -1,0 +1,38 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "javaCFMTA::Flower",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "javaCFMTA::Flowers.csv",
+        "has_header": true
+      },
+      "import_settings": {
+        "import_columns": [
+          "flid",
+          "name",
+          "ts_update",
+          "ts_create"
+        ]
+      }
+    },
+    {
+      "target_table": "javaCFMTA::ExtraInfo.Shops",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "javaCFMTA::Shops.csv",
+        "has_header": true
+      },
+      "import_settings": {
+        "import_columns": [
+          "id",
+					"shid",
+          "flid",
+          "name",
+          "description"
+        ]
+      }
+    }
+  ]
+}

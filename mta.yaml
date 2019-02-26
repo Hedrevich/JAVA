@@ -1,9 +1,9 @@
-ID: javaSAM
+ID: javaCFMTA
 _schema-version: "2.1"
 version: 0.0.2
 
 modules:
- - name: dbjava
+ - name: db
    type: hdb
    path: db
    parameters:
@@ -21,7 +21,7 @@ modules:
        command: [ clean, install ]
        defines:
          skipTests: true
-     build-result: target/leverx-spring-demo-0.0.1-SNAPSHOT.jar
+     build-result: target/leverx-spring-proj-0.0.1-SNAPSHOT.jar
    parameters:
      memory: 1024M
      disk-quota: 512M
@@ -33,7 +33,7 @@ modules:
      - name: pt_hdi
      - name: pt_dest
      - name: javauaa
-     - name: pt_conn
+    #  - name: pt_conn
 
  - name: router
    type: nodejs
@@ -57,7 +57,7 @@ resources:
    parameters:
      service-plan: hdi-shared
      service: hanatrial
-     config: {schema: SAMHDI}
+     config: {schema: AMJAVA}
    properties:
      hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
@@ -81,8 +81,8 @@ resources:
      service: html5-apps-repo
    type: org.cloudfoundry.managed-service
 
- - name: pt_conn
-   type: org.cloudfoundry.managed-service
-   parameters:
-     service: connectivity
-     service-plan: lite
+#  - name: pt_conn
+#    type: org.cloudfoundry.managed-service
+#    parameters:
+#      service: connectivity
+#      service-plan: lite

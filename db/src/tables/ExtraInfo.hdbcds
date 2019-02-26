@@ -1,0 +1,19 @@
+﻿namespace javaCFMTA;
+using javaCFMTA::Flower;
+
+context ExtraInfo{
+entity Shops {
+		@Comment: 'Id of delivery'
+		id : String(4);
+		@Comment: 'Id of Shop'
+		shid : String(4);
+		@Comment: 'Flower in Shop'
+		flid : String(4);
+		@Comment: 'Name'
+		name : String(100);
+		@Comment: 'Description'
+		description : String(100);
+
+    toFlower : Association[*] to Flower on toFlower.flid = flid;
+		};
+};
