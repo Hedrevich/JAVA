@@ -65,7 +65,7 @@ public class CloudService {
 		destinationMap.forEach((key, value) -> {
 			Destination destination = new Destination();
 			destination.setName(value.getName());
-			destination.setDescription(value.getDescription().orElseGet(() -> "No description"));
+			destination.setDescription(value.getDescription().orElse("No description"));
 			destination.setDestinationType(value.getDestinationType().toString());
 			Map<String, String> propertyMap = value.getPropertiesByName();
 			List<Property> propertyList = new ArrayList<>();

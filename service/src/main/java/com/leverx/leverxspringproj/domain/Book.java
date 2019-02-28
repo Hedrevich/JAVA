@@ -1,6 +1,5 @@
 package com.leverx.leverxspringproj.domain;
 
-
 public class Book {
 
     private String bookId;

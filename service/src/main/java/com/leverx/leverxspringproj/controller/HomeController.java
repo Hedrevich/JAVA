@@ -29,7 +29,7 @@ public class HomeController {
 	private static final String FAMILY_NAME = "family_name";
 	private static final String SPACE_NAME = "space_name";
 
-//fixme
+
 	@Autowired
 	private CloudService cloudService;
 

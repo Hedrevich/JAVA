@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="UTF-8">
-<title>Auth</title>
+<head> <meta charset="UTF-8">
+	<title>Spring Boot</title>
 </head>
 <body>
-	<h2>Scopes:</h2>
-	<ul th:each="scope: ${scopes}">
-		<li th:text="${scope}">authority</li>
-	</ul>
-	<h2>Token info:</h2>
-	<p>TOKEN:</p>
-	<p th:text="${token}"></p>
-	<p>name:</p>
-	<p th:text="${name}"></p>
-	<p>familyname:</p>
-	<p th:text="${familyname}"></p>
-	</ul>
+	<p th:text="'Token: ' + ${token}">token: </p>
+	<p th:text="'Name: ' + ${name}">name: </p>
+	<p th:text="'Family name: ' + ${familyname}">Family name: </p>
 </body>
 </html>

@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-//fixme
+
 @Repository
 public class AuthorDao implements IAuthorDao {
 	private static final Logger logger = LoggerFactory.getLogger(AuthorDao.class);
@@ -28,7 +28,7 @@ public class AuthorDao implements IAuthorDao {
 		this.dataSource = dataSource;
 	}
 
-	@Override
+	@Override  
 	public Optional<Author> getById(String id) {
 		Optional<Author> entity = Optional.<Author>empty();
 		try (Connection conn = dataSource.getConnection();
@@ -49,9 +49,9 @@ public class AuthorDao implements IAuthorDao {
 		} catch (SQLException e) {
 			logger.error("Error while trying to get entity by Id: " + e.getMessage());
 		}
-		return entity;
-	}
-
+		return entity;  
+	} 
+	 
 	@Override
 	public List<Author> getAll() {
 
@@ -72,8 +72,8 @@ public class AuthorDao implements IAuthorDao {
 			 logger.error("Error while trying to get list of entities: " + e.getMessage());
 		 }
 		 return authorsList;
-	}
-
+	} 
+	 
 	@Override
 	public void save(Author entity) {
 		 try (Connection conn = dataSource.getConnection();
@@ -85,8 +85,8 @@ public class AuthorDao implements IAuthorDao {
 		 } catch (SQLException e) {
 			 logger.error("Error while trying to add entity: " + e.getMessage());
 		 }
-	}
-
+	} 
+	 
 	@Override
 	public void delete(String id) {
 		 try (Connection conn = dataSource.getConnection();
@@ -99,7 +99,7 @@ public class AuthorDao implements IAuthorDao {
 			 logger.error("Error while trying to delete entity: " + e.getMessage());
 		 }
 	}
-
+	 
 	@Override
 	public void update(Author entity) {
 		 try(Connection conn = dataSource.getConnection();
@@ -112,5 +112,5 @@ public class AuthorDao implements IAuthorDao {
 			 logger.error("Error while trying to update entity: " + e.getMessage());
 		 }
 	}
-
+	
 }

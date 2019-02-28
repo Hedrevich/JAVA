@@ -7,8 +7,6 @@ public class Author {
     private String name;
     private List<Book> bookList;
 
-    
-    
     public String getName() {
         return name;
     }
