@@ -11,7 +11,7 @@ public class SecurityService {
 
     public void userHasAuthorization(String authorization) throws AccessDeniedException {
         if (!UserAccessor.getCurrentUser().hasAuthorization(new Authorization(authorization))) {
-            throw new AccessDeniedException("User action is not permitted! Insufficient privilege!");
+            throw new AccessDeniedException("Denied access!");
         }
     }
 

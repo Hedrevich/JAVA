@@ -1,19 +1,29 @@
-﻿namespace javaCFMTA;
-using javaCFMTA::Flower;
+namespace javaCFMTA;
+using javaCFMTA::Author;
 
 context ExtraInfo{
-entity Shops {
-		@Comment: 'Id of delivery'
-		id : String(4);
-		@Comment: 'Id of Shop'
-		shid : String(4);
-		@Comment: 'Flower in Shop'
-		flid : String(4);
-		@Comment: 'Name'
-		name : String(100);
-		@Comment: 'Description'
-		description : String(100);
 
-    toFlower : Association[*] to Flower on toFlower.flid = flid;
+		entity Address {
+    		@Comment: 'Id of Address'
+		    key adid : Integer64 generated always as identity ( start with 1 increment by 1 );
+		    @Comment: 'User for Address'
+		    author_id : String(4);
+		    @Comment: 'City'
+		    city : String(100);
+		    @Comment: 'Street'
+		    strt : String(100);
+		    @Comment: 'House Number'
+		    hnum : Integer;
+		};
+
+		entity Book {
+		    @Comment: 'Id of Book'
+		    key book_id : String(4);
+		    @Comment: 'Book author'
+		    author_id : String(4);
+		    @Comment: 'Name of book'
+		    name : String(100);
+
+    		toAuthor : Association[1] to Author on toAuthor.author_id = author_id;
 		};
 };

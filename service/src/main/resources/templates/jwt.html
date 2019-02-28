@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Auth</title>
+</head>
+<body>
+	<h2>Scopes:</h2>
+	<ul th:each="scope: ${scopes}">
+		<li th:text="${scope}">authority</li>
+	</ul>
+	<h2>Token info:</h2>
+	<p>TOKEN:</p>
+	<p th:text="${token}"></p>
+	<p>name:</p>
+	<p th:text="${name}"></p>
+	<p>familyname:</p>
+	<p th:text="${familyname}"></p>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+namespace javaCFMTA;
+
+using javaCFMTA::ExtraInfo.Address;
+using javaCFMTA::ExtraInfo.Book;
+ 
+entity Author {
+    @Comment: 'Id of Author'
+    key author_id : String(4);
+    @Comment: 'Author name'
+    name : String(100);
+    @Comment: 'Last create'
+    created : UTCDateTime;
+    @Comment: 'Last update'
+    updated : UTCDateTime;
+}; 

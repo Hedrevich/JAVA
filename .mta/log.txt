@@ -1,6 +1,6 @@
 [main] INFO com.sap.di.ext.mta.proc.DescriptorProcessorImpl - MTA manifest processing on 7 threads
 [main] INFO com.sap.di.ext.mta.cli.CliExecutor - arguments: [--build-target=CF, build]
-[main] INFO com.sap.di.ext.mta.cli.CliExecutor - Archive path is D:\dev\javaCFMTA\javaCFMTA.mtar
+[main] INFO com.sap.di.ext.mta.cli.CliExecutor - Archive path is D:\dev\JAVA_1\JAVA_1.mtar
 [main] DEBUG com.sap.di.ext.mta.cli.CliBuildExecutor - Starting MTA build
 [main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.DesignDescriptor$$impl0 for bean interface com.sap.di.ext.mta.dto.DesignDescriptor
 [main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.DesignModule$$impl1 for bean interface com.sap.di.ext.mta.dto.DesignModule
@@ -11,26 +11,26 @@
 [main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.proc.ModuleBuildDependency$$impl5 for bean interface com.sap.di.ext.mta.proc.ModuleBuildDependency
 [main] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA
 [main] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: created 7 verification tasks
-[pool-1-thread-2] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: started symbol resource[javauaa]
-[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: started symbol resource[pt_dest]
 [pool-1-thread-1] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: started symbol resource[pt_hdi]
-[pool-1-thread-4] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: started symbol resource[pt_router]
-[pool-1-thread-5] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: started symbol module[db]
-[pool-1-thread-4] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: finished symbol resource[pt_router]
-[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: finished symbol resource[pt_dest]
+[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: started symbol resource[pt_dest]
 [pool-1-thread-1] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: finished symbol resource[pt_hdi]
+[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: finished symbol resource[pt_dest]
+[pool-1-thread-2] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: started symbol resource[javauaa]
+[pool-1-thread-5] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: started symbol module[db]
+[pool-1-thread-4] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: started symbol resource[pt_router]
+[pool-1-thread-4] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: finished symbol resource[pt_router]
 [pool-1-thread-7] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: started symbol module[router]
 [pool-1-thread-6] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: started symbol module[javarest]
 [pool-1-thread-2] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: finished symbol resource[javauaa]
 [pool-1-thread-7] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'router': command timeout is 300 seconds
-[pool-1-thread-6] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'javarest': command timeout is 300 seconds
 [pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'db': command timeout is 300 seconds
-[pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'db': command output file is D:\dev\javaCFMTA\.mta\modulebuild8176531104320436426.txt
-[pool-1-thread-6] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'javarest': command output file is D:\dev\javaCFMTA\.mta\modulebuild8590009257310550611.txt
-[pool-1-thread-7] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'router': command output file is D:\dev\javaCFMTA\.mta\modulebuild99821128620548973.txt
-[pool-1-thread-6] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'javarest': invoking command [mvn.cmd, -B, clean, install, -DskipTests="true"]
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'javarest': command timeout is 300 seconds
+[pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'db': command output file is D:\dev\JAVA_1\.mta\modulebuild325741021220448751.txt
+[pool-1-thread-7] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'router': command output file is D:\dev\JAVA_1\.mta\modulebuild177705663227253057.txt
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'javarest': command output file is D:\dev\JAVA_1\.mta\modulebuild8625829586231654695.txt
 [pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'db': invoking command [npm.cmd, install, --production]
 [pool-1-thread-7] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'router': invoking command [npm.cmd, install, --production]
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'javarest': invoking command [mvn.cmd, -B, clean, install, -DskipTests="true"]
 [pool-1-thread-5] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: finished symbol module[db]
 [pool-1-thread-7] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: finished symbol module[router]
 [pool-1-thread-6] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA javaCFMTA: finished symbol module[javarest]
