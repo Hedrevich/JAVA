@@ -15,16 +15,19 @@ public class Suppliers {
     private int id;
     private String name;
     private List address;
-    private Product product;
 
-
-    public Product getProduct() {
+    public List<Product> getProduct() {
         return product;
     }
 
-    public void setProduct(Product product) {
+    public void setProduct(List<Product> product) {
         this.product = product;
     }
+
+    private List<Product> product;
+
+
+
 
 
     public int getId() {

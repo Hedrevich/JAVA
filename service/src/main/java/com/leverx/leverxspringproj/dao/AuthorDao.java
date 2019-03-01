@@ -88,6 +88,7 @@ public class AuthorDao implements IAuthorDao {
                          String.format("INSERT INTO \"%s\"(\"%s\", \"%s\") VALUES (?, ?)", TABLE_NAME,AUTHOR_ID,AUTHOR_NAME)))
 		 {
 			 statement.setString(1, entity.getName());
+			 statement.setString(2,entity.getAuthorId());
 			 statement.execute();
 		 } catch (SQLException e) {
 			 logger.error("Error while trying to add entity: " + e.getMessage());
