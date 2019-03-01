@@ -85,7 +85,7 @@ public class AuthorDao implements IAuthorDao {
 		entity.setAuthorId(Sequence.getNextValue(dataSource, SEQUENCE, logger));
 		 try (Connection conn = dataSource.getConnection();
 				 PreparedStatement statement = conn.prepareStatement(
-				String.format("INSERT INTO \"%s\"(\"%s\") VALUES (?)",TABLE_NAME,AUTHOR_NAME)))
+                         String.format("INSERT INTO \"%s\"(\"%s\", \"%s\") VALUES (?, ?)", TABLE_NAME,AUTHOR_ID,AUTHOR_NAME)))
 		 {
 			 statement.setString(1, entity.getName());
 			 statement.execute();
