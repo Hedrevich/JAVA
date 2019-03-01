@@ -1,5 +1,6 @@
 package com.leverx.leverxspringproj.dao;
 
+import com.leverx.leverxspringproj.domain.Author;
 import com.leverx.leverxspringproj.domain.Book;
 import com.leverx.leverxspringproj.intfce.IBookDao;
 import org.slf4j.Logger;
@@ -20,7 +21,9 @@ import java.util.Optional;
 public class BookDao implements IBookDao {
 
     private static final Logger logger = LoggerFactory.getLogger(BookDao.class);
-
+    private static final String TABLE_NAME = "javaCFMTA::ExtraInfo.Book";
+    private static final String BOOK_ID = "book_id";
+    private static final String BOOK_NAME = "name";
     private final DataSource dataSource;
 
     @Autowired
@@ -31,18 +34,18 @@ public class BookDao implements IBookDao {
     @Override
     public Optional<Book> getById(String id) {
 
-        Optional<Book> entity = Optional.<Book>empty();
+        Optional<Book> entity = Optional.empty();
 
-        try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmnt = conn.prepareStatement(
-                     "SELECT TOP 1 * FROM \"javaCFMTA::ExtraInfo.Book\" WHERE \"book_id\" = ?"))
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement(
+                     String.format("SELECT TOP 1 * FROM \"%s\" WHERE \"%s\" = ?",TABLE_NAME,BOOK_ID)))
         {
-            stmnt.setString(1, id);
-            ResultSet result = stmnt.executeQuery();
+            statement.setString(1, id);
+            ResultSet result = statement.executeQuery();
             if (result.next()) {
                 Book book = new Book();
                 book.setBookId(id);
-                book.setName(result.getString("book_id"));
+                book.setName(result.getString(BOOK_ID));
                 entity = Optional.of(book);
             } else {
                 entity = Optional.empty();
@@ -57,15 +60,16 @@ public class BookDao implements IBookDao {
     @Override
     public List<Book> getAll() {
         List<Book> bookList = new ArrayList<>();
-        try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM \"javaCFMTA::ExtraInfo.Book\""))
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement(
+                     String.format("SELECT * FROM \"$s\"",TABLE_NAME)))
         {
-            ResultSet result = stmnt.executeQuery();
+            ResultSet result = statement.executeQuery();
 
             while (result.next()) {
                 Book book = new Book();
-                book.setBookId(result.getString("book_id"));
-                book.setName(result.getString("name"));
+                book.setBookId(result.getString(BOOK_ID));
+                book.setName(result.getString(BOOK_NAME));
                 bookList.add(book);
             }
         } catch (SQLException e) {
@@ -76,43 +80,47 @@ public class BookDao implements IBookDao {
     }
 
     @Override
-    public void save(Book entity) {
-        try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmnt = conn.prepareStatement(
-             "INSERT INTO \"javaCFMTA::ExtraInfo.Book\"(\"author_id\", \"book_id\", \"name\") VALUES (?,?,?)"))
+    public Author save(Book entity) {
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement(
+                     String.format("INSERT INTO \"%s\"(\"author_id\", \"%s\", \"%s\") VALUES (?,?,?)", TABLE_NAME, BOOK_ID, BOOK_NAME)))
         {
-        	stmnt.setString(1, entity.getAuthorId());
-        	stmnt.setString(1, entity.getBookId());
-        	stmnt.setString(1, entity.getName());
-            stmnt.execute();
+            statement.setString(1, entity.getAuthorId());
+            statement.setString(1, entity.getBookId());
+            statement.setString(1, entity.getName());
+            statement.execute();
         } catch (SQLException e) {
             logger.error("Error while trying to add entity: " + e.getMessage());
         }
+        return null;
     }
 
     @Override
-    public void delete(String id) {
-        try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmnt = conn.prepareStatement("DELETE FROM \"javaCFMTA::ExtraInfo.Book\" WHERE \"author_id\" = ?"))
+    public Author delete(String id) {
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement(
+                     String.format("DELETE FROM \"%s\" WHERE \"%s\" = ?", TABLE_NAME, BOOK_ID)))
         {
-            stmnt.setString(1, id);
-            stmnt.execute();
+            statement.setString(1, id);
+            statement.execute();
         } catch (SQLException e) {
-            logger.error("Error while trying to delete entity: " + e.getMessage());
+            logger.error("Can't delete entity: " + e.getMessage());
         }
+        return null;
     }
 
     @Override
-    public void update(Book entity) {
-        try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmnt = conn.prepareStatement(
-                     "UPDATE \"javaCFMTA::ExtraInfo.Book\" SET \"name\" = ? WHERE \"book_id\" = ?"))
+    public Author update(Book entity) {
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement(
+                     String.format("UPDATE \"%s\" SET \"%s\" = ? WHERE \"%s\" = ?", TABLE_NAME, BOOK_NAME, BOOK_ID)))
         {
-            stmnt.setString(1, entity.getName());
-            stmnt.setString(2, entity.getBookId());
-            stmnt.executeUpdate();
+            statement.setString(1, entity.getName());
+            statement.setString(2, entity.getBookId());
+            statement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Error while trying to update entity: " + e.getMessage());
         }
+        return null;
     }
 }

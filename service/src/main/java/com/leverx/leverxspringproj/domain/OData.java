@@ -4,6 +4,7 @@ public class OData {
 
     private int id;
     private String name;
+    private String address;
 
     public int getId() {
         return id;
@@ -21,4 +22,7 @@ public class OData {
         this.name = name;
     }
 
+    public String getAddress() { return address; }
+
+    public void setAddress(String address) { this.address = address; }
 }

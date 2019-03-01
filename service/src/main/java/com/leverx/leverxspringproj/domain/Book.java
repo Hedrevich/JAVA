@@ -22,6 +22,10 @@ public class Book {
         this.bookId = bookId;
     }
 
+    public void setAuthorId (String authorId) {
+        this.authorId = authorId;
+    }
+
     public String getAuthorId() {
         return authorId;
     }

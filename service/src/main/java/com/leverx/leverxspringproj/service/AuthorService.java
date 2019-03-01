@@ -33,15 +33,17 @@ public class AuthorService {
 		return author;
 	}
 	
-	public void createAuthor(Author author) {
-		authorDao.save(author);
+	public Author createAuthor(Author author) {
+		 return authorDao.save(author);
+	}
+
+	public Author updateAuthor(Author author) {
+		return authorDao.update(author);
 	}
 	
-	public void updateAuthor(Author author) {authorDao.update(author);
-	}
-	
-	public void deleteAuthor(String id) {
-		authorDao.delete(id);
+	public Author deleteAuthor(String id)
+	{
+		return authorDao.delete(id);
 	}
 	
 }
