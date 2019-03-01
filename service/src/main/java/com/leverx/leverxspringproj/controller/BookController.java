@@ -24,6 +24,11 @@ public class BookController {
         return bookService.getBook(id);
     }
 
+    @GetMapping(value="/Book/{id}")
+    public List<String> getPersonAddress(@PathVariable String id) {
+        return bookService.getAuthorBook(id);
+    }
+
     @PostMapping(value="/Book")
     public void createBook(@RequestBody Book book) {
         bookService.createBook(book);

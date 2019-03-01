@@ -45,4 +45,8 @@ public class BookService {
         bookDao.delete(id);
     }
 
+    public List<String> getAuthorBook(String id) {
+        return bookDao.getAuthorBook(id);
+    }
+
 }
